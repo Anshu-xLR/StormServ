@@ -1,5 +1,6 @@
 #main {
 	width:100%;
+	min-height:48px;
 	height:auto;
 	position:absolute;
 	top:0px;
@@ -14,16 +15,18 @@
 }
 #menu {
 	width:100%;
-	height:48px;
+	height:auto;
 	background:#1d1d1d;
 	display:block;
 	position:fixed;
 	top:0px;
 	left:0px;
+	z-index:9999;
+}
+#menu ul {
 	list-style-type:none;
     margin:0px;
     padding:0px;
-	z-index:9999;
 }
 #menu-com {
 	height:48px;
@@ -33,7 +36,10 @@
 #menu li {
 	float:left;
 }
-#menu li a {
+#menu li.mobile {
+	float:none;
+}
+#menu li a.desktop {
 	-webkit-transition:all 0.30s ease-in-out;
 	-moz-transition:all 0.30s ease-in-out;
 	-o-transition:all 0.30s ease-in-out;
@@ -47,11 +53,31 @@
 	text-align:center;
 	line-height:48px;
 	font-weight:bold;
+	text-transform:uppercase;
 }
-#menu li a:hover {
+#menu li a.desktop:hover {
 	color:#000000;
 	background:#ffffff;
 	height:42px;
+}
+#menu li a.mobile {
+	-webkit-transition:none 0.30s ease-in-out;
+	-moz-transition:none 0.30s ease-in-out;
+	-o-transition:none 0.30s ease-in-out;
+	transition:none 0.30s ease-in-out;
+	display:block;
+	width:100%;
+	height:36px;
+	text-decoration:none;
+	text-align:center;
+	line-height:36px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+#menu li a.mobile:hover {
+	color:#000000;
+	background:#ffffff;
+	height:30px;
 }
 a.menu-blue {
 	color:#156aeb;
@@ -76,4 +102,31 @@ a.menu-yellow {
 }
 a.menu-yellow:hover {
 	border-bottom:6px solid #ffb70a;
+}
+a.menu-extra {
+	width:54px;
+	height:32px;
+	margin:8px 20px;
+	background:url('images/menu-extra.png') no-repeat;
+	display:block;
+}
+a.menu-extra:hover,a.menu-extra:active {
+	background-position:0px -32px;
+}
+#content {
+	color:#1d1d1d;
+}
+
+.heading {
+	font-size:32px;
+	width:90%;
+	text-align:left;
+	margin:10px auto;
+	padding:10px;
+	border-left:6px solid #156aeb;
+}
+.paragraph {
+	font-size:14px;
+	width:90%;
+	margin:0 auto;
 }

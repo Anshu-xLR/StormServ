@@ -4,18 +4,22 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="slippry.css">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/responsive.js"></script>
 	<script type="text/javascript" src="js/slippry.min.js"></script>
 </head>
 <body>
 	<div id="main">
-		<ul id="menu">
-			<li><a href="#" class="menu-blue">Home</a></li>
-			<li><a href="#" class="menu-red">GST Events</a></li>
-			<li><a href="#" class="menu-yellow">Gallery</a></li>
-			<li><a href="#" class="menu-green">The Team</a></li>
-			<li><a href="#" class="menu-blue">About-Us</a></li>
-			<li><a href="#" class="menu-red">Contact Us</a></li>
-		</ul>
+		<div id="menu">
+			<a href="javascript:void(0);" class="menu-extra" style="display:none;"></a>
+			<ul>
+				<li><a href="#" class="menu-blue desktop">Home</a></li>
+				<li><a href="#" class="menu-red desktop">GST Events</a></li>
+				<li><a href="#" class="menu-yellow desktop">Gallery</a></li>
+				<li><a href="#" class="menu-green desktop">The Team</a></li>
+				<li><a href="#" class="menu-blue desktop">About Us</a></li>
+				<li><a href="#" class="menu-red desktop">Contact Us</a></li>
+			</ul>
+		</div>
 		<div id="menu-com"></div>
 		<div id="container">
 			<ul id="slippry-slider">
@@ -29,10 +33,19 @@
 					<a href="#slide3"><img src="images/slider3.jpg"  alt="Blah Blah!! I'm a caption!!"></a>
 				</li>
 			</ul>
+			<div id="content">
+				<h2 class="heading">
+					Welcome to Google Students Team's Website !!
+				</h2>
+				<div class="paragraph">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum risus velit, at pretium ante semper ut. Nunc vitae orci pretium, porta eros quis, tempus libero. Vivamus consequat consequat iaculis. Sed tristique velit at augue bibendum vulputate. Vivamus vitae pharetra lorem, eu malesuada ipsum. Sed vitae feugiat est. Integer facilisis felis nec purus faucibus sodales. Pellentesque vel semper mauris. Vivamus ultrices pulvinar elit sed rhoncus. Sed egestas interdum sapien mattis volutpat. Aliquam enim dolor, hendrerit ut est eget, pellentesque ultrices magna. Nulla id orci mollis, aliquam felis vitae, euismod ipsum. Integer semper magna eget ex cursus condimentum. Etiam aliquam sapien metus. Aliquam erat volutpat. Quisque rhoncus ac justo in viverra. Curabitur vitae porta arcu, eu lacinia arcu. Nulla tincidunt nibh eu euismod efficitur. Proin quis mi velit. Vestibulum eget orci fringilla velit viverra porttitor. Etiam sit amet placerat purus. Suspendisse eu quam et lectus condimentum euismod. Integer in tortor vel nulla rutrum maximus. Quisque faucibus convallis diam eget vehicula. Donec eu massa sit amet sem commodo volutpat. Proin ac pretium velit. Nullam posuere arcu at mauris bibendum, vel tempus leo tempus. Mauris viverra augue sit amet neque laoreet, sed dictum mauris interdum. Mauris velit velit, facilisis ac scelerisque placerat, vehicula. 
+				</div>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript">
 		$(document).ready(function(){
+			webApp.init();
 			$('#slippry-slider').slippry()
 		});
 	</script>
