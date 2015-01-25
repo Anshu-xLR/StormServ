@@ -24,7 +24,6 @@ var webApp = (function() {
 		globals.timer = setTimeout(resolutionHandle, 0);
 	}
 	function menuHandle() {
-		console.log(globals.menu);
 		if($(window).width() < globals.menu.width && !globals.menu.mobile) {
 			globals.menu.ul.hide();
 			globals.menu.extra.show();
