@@ -53,7 +53,7 @@ var webApp = (function() {
 			globals.menu.width += globals.menu.dom.eq(i).width();
 		}
 		
-		globals.menu.extra.click(function() {
+		globals.menu.extra.on('click touchstart', function() {
 			globals.menu.ul.toggle();
 		});
 		
