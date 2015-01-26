@@ -53,8 +53,9 @@ var webApp = (function() {
 			globals.menu.width += globals.menu.dom.eq(i).width();
 		}
 		
-		globals.menu.extra.on('click touchstart', function() {
+		globals.menu.extra.on('click', function() {
 			globals.menu.ul.toggle();
+			return false;
 		});
 		
 		resolutionHandle();
