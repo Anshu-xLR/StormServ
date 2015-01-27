@@ -5,6 +5,7 @@ var webApp = (function() {
 			timer		:	null,
 			width		:	0,
 			dom		:	null,
+			div		:	null,
 			ul			:	null,
 			extra	:	null,
 			mobile	:	false
@@ -27,6 +28,7 @@ var webApp = (function() {
 		if($(window).width() < globals.menu.width && !globals.menu.mobile) {
 			globals.menu.ul.hide();
 			globals.menu.extra.show();
+			globals.menu.div.css("height","auto");
 			globals.menu.dom.each(function(index) {
 				$(this).addClass("mobile");
 				$(this).children("a").eq(0).removeClass("desktop");
@@ -37,6 +39,7 @@ var webApp = (function() {
 		if($(window).width() > globals.menu.width && globals.menu.mobile) {
 			globals.menu.extra.hide();
 			globals.menu.ul.show();
+			globals.menu.div.css("height","48px");
 			globals.menu.dom.each(function(index) {
 				$(this).removeClass("mobile");
 				$(this).children("a").eq(0).removeClass("mobile");
@@ -46,6 +49,7 @@ var webApp = (function() {
 		}
 	}
 	external.init = function() {
+		globals.menu.div = $("#menu");
 		globals.menu.dom = $("#menu").find("li");
 		globals.menu.ul = $("#menu").children("ul").eq(0);
 		globals.menu.extra = $("#menu").children("a").eq(0);
